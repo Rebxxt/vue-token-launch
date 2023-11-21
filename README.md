@@ -1,4 +1,8 @@
-# vue-learn
+# Token Launch redesign on Vue3
+
+## Project reference
+[Behance link](https://www.behance.net/gallery/183908509/Launchpad-Website-Design?tracking_source=search_projects&l=1)
+
 
 ## Project setup
 ```
