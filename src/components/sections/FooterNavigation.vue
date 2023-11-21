@@ -150,7 +150,7 @@ export default {
   box-sizing: content-box;
   gap: 1em;
   padding: 0 2em 1em;
-  border: 1px solid var(--color-ligth-brown);
+  border: 1px solid var(--color-light-brown);
   border-top: none;
   background: var(--bg-ligth-brown);
   border-radius: 0 0 16px 16px;
@@ -170,7 +170,7 @@ export default {
   align-items: stretch !important;
   gap: 2em;
   padding: 2em;
-  border: 1px solid var(--color-ligth-brown);
+  border: 1px solid var(--color-light-brown);
   border-bottom: none;
   background: var(--bg-ligth-brown);
   border-radius: 16px 16px 16px 0;
@@ -220,7 +220,7 @@ export default {
       display: flex;
       align-items: flex-end;
       justify-content: space-between;
-      border-top: 1px solid var(--color-ligth-brown);
+      border-top: 1px solid var(--color-light-brown);
       flex: 1;
       margin-right: 16px;
 
@@ -244,7 +244,7 @@ export default {
           -webkit-border-radius: 8px;
           -moz-border-radius: 8px;
           border-radius: 8px;
-          border: 1px solid var(--color-ligth-brown);
+          border: 1px solid var(--color-light-brown);
           background: var(--bg-ligth-brown);
           height: 1.2em;
           width: 1.2em;

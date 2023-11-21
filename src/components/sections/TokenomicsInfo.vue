@@ -98,6 +98,10 @@ export default {
 
 <style scoped lang="scss">
 
+h5, h6 {
+  margin: 16px;
+}
+
 .body {
   &-footer {
     z-index: 1;
