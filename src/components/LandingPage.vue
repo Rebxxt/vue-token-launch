@@ -1,12 +1,14 @@
 <template>
   <div class="sections">
-    <PreviewInformation class="full-page"></PreviewInformation>
-    <AboutUs class="full-page"></AboutUs>
-    <EarlyAccess class="full-page"></EarlyAccess>
-    <LeaderBoard class="full-page"></LeaderBoard>
-    <ProjectPlan></ProjectPlan>
-    <TokenomicsInfo class="full-page"></TokenomicsInfo>
-    <FooterNavigation></FooterNavigation>
+    <div class="blue-wrap">
+      <PreviewInformation class="full-page"></PreviewInformation>
+      <AboutUs class="full-page"></AboutUs>
+      <EarlyAccess class="full-page"></EarlyAccess>
+      <LeaderBoard class="full-page"></LeaderBoard>
+      <ProjectPlan></ProjectPlan>
+      <TokenomicsInfo class="full-page"></TokenomicsInfo>
+      <FooterNavigation></FooterNavigation>
+    </div>
   </div>
 </template>
 
@@ -25,7 +27,14 @@ export default {
 </script>
 
 <style scoped>
+
+.blue-wrap {
+  backdrop-filter: blur(100px);
+}
+
   .sections {
+    background-image: radial-gradient(ellipse 115% 19% at 25% 96%, rgba(245, 143, 243, 0.27) 0%, rgba(241, 124, 239, 0.38), 16%, transparent),
+    radial-gradient(ellipse 155% 15% at 75% 97%, rgba(1, 163, 255, 0.38) 0%, rgba(1, 163, 255, 0.29), 25%, transparent);
     color: var(--color-white);
   }
   .body {

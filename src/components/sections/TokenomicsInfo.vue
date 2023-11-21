@@ -242,8 +242,8 @@ export default {
       align-items: center;
 
       transform: translateY(45%);
-      background-image: linear-gradient(to top, var(--bg-black), var(--bg-black), rgb(6, 6, 6), rgb(26, 26, 26)),
-                        linear-gradient(to top, var(--bg-black), var(--bg-black), rgba(22,23,27,0.3), rgba(22,23,27,0.7), rgba(67,63,72,1));
+      background-image: linear-gradient(to top, transparent, transparent, transparent, rgb(6, 6, 6), rgb(26, 26, 26)),
+                        linear-gradient(to top, transparent, transparent, transparent, rgba(22,23,27,0.3), rgba(22,23,27,0.7), rgba(67,63,72,1));
       border: double 2px transparent;
       background-origin: border-box;
       background-clip: content-box, border-box;

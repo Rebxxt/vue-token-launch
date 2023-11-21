@@ -38,17 +38,6 @@ export default {
   src: url("@/assets/fonts/Rubik-Italic.ttf");
   font-style: italic;
 }
-@font-face {
-  font-family: Rubik;
-  src: url("@/assets/fonts/Rubik-Light.ttf");
-  font-weight: lighter;
-}
-@font-face {
-  font-family: Rubik;
-  src: url("@/assets/fonts/Rubik-LightItalic.ttf");
-  font-style: italic;
-  font-weight: lighter;
-}
 #app {
   background: var(--bg-black);
 }
