@@ -1,5 +1,7 @@
 <template>
   <div class="body">
+    <div class="noise"></div>
+
     <header class="flex-center jcsb">
       <div class="logo flex-center"><img src="@/assets/images/rocket.png" alt=""><h5>TokenLaunch</h5></div>
 
@@ -29,9 +31,13 @@
     </header>
 
     <main class="flex-center">
-      <img src="@/assets/images/main-rocket3.png">
+      <div class="rocket relative">
+        <div class="wrapper">
+          <img src="@/assets/images/main-rocket3.png">
+        </div>
+      </div>
 
-      <div class="content-translate flex flex-column gap2em">
+      <div class="preview content-translate flex flex-column gap2em">
         <div>
           <h2 class="m0 text-nowrap">Expanding Horizons</h2>
           <h1 class="m0 text-nowrap">Token Launchpads</h1>
@@ -50,8 +56,6 @@
           </button>
         </div>
       </div>
-
-
     </main>
   </div>
 </template>
@@ -101,12 +105,51 @@ export default {
 
 <style scoped lang="scss">
 
+.rocket {
+  flex: 2;
+
+  .wrapper {
+    position: absolute;
+    width: 1000px;
+    height: 1100px;
+    background-image: url('@/assets/svg/bg-decoration-1.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0 100%;
+    top: 0;
+    right: 0;
+    translate: 0 -25%;
+
+    img {
+      float: right;
+      translate: 0 -10%;
+      opacity: 0.9;
+      filter: stretch(1);
+    }
+  }
+}
+.preview {
+  flex: 3;
+}
+
+
 .body {
-  background-image: url('@/assets/svg/bg-decoration-1.svg'), linear-gradient(rgb(1,1,1), rgb(100,100,100));
+  background-image: url('@/assets/svg/bg-decoration-2.svg');
   background-clip: content-box;
   background-repeat: no-repeat;
-  background-size: 70% 70%, 20%;
-  background-position: -50% 80%, 30%;
+  background-position: 90% 20vh;
+  box-sizing: border-box;
+  border-bottom: 5vh solid transparent;
+}
+
+.noise {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('@/assets/images/noise2.png');
+  mask-image: linear-gradient(to top, transparent 0, black 35%);
 }
 
 .content-translate {

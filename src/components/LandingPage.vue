@@ -35,7 +35,7 @@ export default {
   .sections {
     background-image:
         radial-gradient(ellipse 50% 10% at 15% 10%, rgba(245, 143, 243, 0.27) 0%, rgba(241, 124, 239, 0.38), 46%, transparent),
-        radial-gradient(ellipse 115% 19% at 60% 5%, rgba(1, 163, 255, 0.38) 0%, rgba(1, 163, 255, 0.29), 30%, transparent),
+        radial-gradient(ellipse 115% 19% at 60% 5%, rgba(73, 74, 192, 0.4) 0%, rgba(88, 89, 194, 0.5), 30%, transparent),
         radial-gradient(ellipse 20% 10% at 102% 10%, rgba(245, 143, 243, 0.27) 0%, rgba(241, 124, 239, 0.38), 45%, transparent),
         radial-gradient(ellipse 12% 10% at 102% 5%, rgba(1, 163, 255, 0.38) 0%, rgba(1, 163, 255, 0.29), 45%, transparent),
         radial-gradient(ellipse 115% 19% at 25% 96%, rgba(245, 143, 243, 0.27) 0%, rgba(241, 124, 239, 0.38), 16%, transparent),
@@ -215,7 +215,7 @@ button {
   align-items: center;
   gap: 1em;
   position: relative;
-  background: linear-gradient(117deg, rgba(0,6,144,1) 5%, rgba(89,0,218,1) 36%, rgba(125,34,150,1) 60%, rgba(218,137,0,1)  100%);
+  background: linear-gradient(117deg, rgb(33, 38, 173) 5%, rgba(89,0,218,1) 36%, rgba(125,34,150,1) 60%, rgba(218,137,0,1)  100%);
   background-position-x: 0;
   background-size: 200%;
   color: var(--color-white);
@@ -285,6 +285,14 @@ button {
 
 .text-nowrap {
   white-space: nowrap;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
 }
 
 .gap1em {
