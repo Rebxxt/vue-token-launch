@@ -2,6 +2,7 @@
   <div class="sections">
     <div class="blur-wrap">
       <PreviewInformation class="full-page"></PreviewInformation>
+      <ProjectShortStatistics></ProjectShortStatistics>
       <AboutUs class="full-page"></AboutUs>
       <EarlyAccess class="full-page"></EarlyAccess>
       <LeaderBoard class="full-page"></LeaderBoard>
@@ -20,9 +21,12 @@ import LeaderBoard from "@/components/sections/LeaderBoard";
 import PreviewInformation from "@/components/sections/PreviewInformation";
 import ProjectPlan from "@/components/sections/ProjectPlan";
 import TokenomicsInfo from "@/components/sections/TokenomicsInfo";
+import ProjectShortStatistics from "@/components/sections/ProjectShortStatistics.vue";
 export default {
   name: "LandingPage",
-  components: {FooterNavigation, TokenomicsInfo, ProjectPlan, LeaderBoard, EarlyAccess, AboutUs, PreviewInformation}
+  components: {
+    ProjectShortStatistics,
+    FooterNavigation, TokenomicsInfo, ProjectPlan, LeaderBoard, EarlyAccess, AboutUs, PreviewInformation}
 }
 </script>
 
@@ -52,6 +56,7 @@ export default {
   }
   .full-page {
     height: 100vh;
+    min-height: 800px;
   }
   h1 {
     font-size: 10px;
@@ -91,6 +96,13 @@ export default {
 .input-block input:focus {
   outline: none;
   border: none;
+}
+
+.font-normal {
+  font-weight: normal !important;
+}
+.font-bold {
+  font-weight: bold !important;
 }
 
 .subtitle {
@@ -260,6 +272,10 @@ button {
   }
 }
 
+.text-center {
+  text-align: center;
+}
+
 .flex {
   display: flex;
 }
@@ -276,7 +292,10 @@ button {
   justify-content: space-around;
 }
 .flex-column {
-  flex-direction: column;
+  flex-direction: column !important;
+}
+.flex-row {
+  flex-direction: row !important;
 }
 
 .br50p {
@@ -315,5 +334,67 @@ button {
 }
 .gap16px {
   gap: 16px;
+}
+
+.p1 {
+  padding: 1em;
+}
+.p2 {
+  padding: 2em;
+}
+.p3 {
+  padding: 3em;
+}
+.p4 {
+  padding: 4em;
+}
+.p5 {
+  padding: 5em;
+}
+
+.ph1 {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.ph2 {
+  padding-left: 2em;
+  padding-right: 2em;
+}
+.ph3 {
+  padding-left: 3em;
+  padding-right: 3em;
+}
+.ph4 {
+  padding-left: 4em;
+  padding-right: 4em;
+}
+.ph5 {
+  padding-left: 5em;
+  padding-right: 5em;
+}
+
+.pt1 {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.pt2 {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+.pt3 {
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+.pt4 {
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+.pt5 {
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 </style>
