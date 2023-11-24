@@ -15,7 +15,7 @@
       </nav>
 
       <nav class="flex gap1em">
-        <div class="community flex gap1em">
+        <div class="community flex aistretch gap1em">
           <div class="icon-box flex-center br50p" v-for="community in communityNavigation" :key="community.value">
             <img class="icon" :src="community.src" :alt="community.value">
           </div>
@@ -32,7 +32,7 @@
 
     <main class="flex-center">
       <div class="rocket relative">
-        <div class="wrapper">
+        <div class="wrapper absolute">
           <img src="@/assets/images/main-rocket3.png">
         </div>
       </div>
@@ -109,7 +109,6 @@ export default {
   flex: 2;
 
   .wrapper {
-    position: absolute;
     width: 1000px;
     height: 1100px;
     background-image: url('@/assets/svg/bg-decoration-1.svg');
@@ -137,7 +136,7 @@ export default {
   background-image: url('@/assets/svg/bg-decoration-2.svg');
   background-clip: content-box;
   background-repeat: no-repeat;
-  background-position: 90% 20vh;
+  background-position: 90% 16vh;
   box-sizing: border-box;
   border-bottom: 5vh solid transparent;
 }
@@ -173,7 +172,6 @@ header {
   }
 
   .community {
-    align-items: stretch;
     padding: 16px;
 
     .icon-box {

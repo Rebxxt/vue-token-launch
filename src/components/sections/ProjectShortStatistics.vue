@@ -1,5 +1,5 @@
 <template>
-  <div class="body flex-center flex-row gap3em">
+  <div class="body flex-center flex-row gap3em p4">
     <div class="item flex-center flex-column">
       <div class="item-title ph2">
         <h4 class="uppercase font-normal text-center">total active users</h4>

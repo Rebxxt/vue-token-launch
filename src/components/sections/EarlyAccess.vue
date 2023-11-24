@@ -1,7 +1,14 @@
 <template>
   <div class="body">
-    <h1>EarlyAccess</h1>
-    <h2>EarlyAccess</h2>
+    <header class="mb5">
+      <h3 class="text-center mt0 camel">get early access</h3>
+      <h1 class="text-center mt0 camel">to the new token ideas</h1>
+      <p class="text-center mt2 camel fz5 text-grey">AptosLaunch brings top tier solutions to Aptos & out community everyday. Discover our products</p>
+    </header>
+
+    <main>
+
+    </main>
   </div>
 </template>
 

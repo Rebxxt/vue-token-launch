@@ -3,7 +3,7 @@
     <div class="blur-wrap">
       <PreviewInformation class="full-page"></PreviewInformation>
       <ProjectShortStatistics></ProjectShortStatistics>
-      <AboutUs class="full-page"></AboutUs>
+      <AboutUs class="page-3on4"></AboutUs>
       <EarlyAccess class="full-page"></EarlyAccess>
       <LeaderBoard class="full-page"></LeaderBoard>
       <ProjectPlan></ProjectPlan>
@@ -40,6 +40,7 @@ export default {
     background-image:
         radial-gradient(ellipse 50% 10% at 15% 10%, rgba(245, 143, 243, 0.27) 0%, rgba(241, 124, 239, 0.38), 46%, transparent),
         radial-gradient(ellipse 115% 19% at 60% 5%, rgba(73, 74, 192, 0.4) 0%, rgba(88, 89, 194, 0.5), 30%, transparent),
+        radial-gradient(ellipse 80% 15% at 67vw 32%, rgba(73, 74, 192, 0.4) 0%, rgba(88, 89, 194, 0.5), 25%, transparent),
         radial-gradient(ellipse 20% 10% at 102% 10%, rgba(245, 143, 243, 0.27) 0%, rgba(241, 124, 239, 0.38), 45%, transparent),
         radial-gradient(ellipse 12% 10% at 102% 5%, rgba(1, 163, 255, 0.38) 0%, rgba(1, 163, 255, 0.29), 45%, transparent),
         radial-gradient(ellipse 115% 19% at 25% 96%, rgba(245, 143, 243, 0.27) 0%, rgba(241, 124, 239, 0.38), 16%, transparent),
@@ -57,6 +58,10 @@ export default {
   .full-page {
     height: 100vh;
     min-height: 800px;
+  }
+  .page-3on4 {
+    height: 75vh;
+    min-height: 600px;
   }
   h1 {
     font-size: 10px;
@@ -103,10 +108,6 @@ export default {
 }
 .font-bold {
   font-weight: bold !important;
-}
-
-.subtitle {
-  color: var(--color-grey)
 }
 
 .icon {
@@ -204,16 +205,41 @@ p {
   font-size: var(--fz-7);
 }
 
+.fz1 {
+  font-size: var(--fz-1);
+}
+.fz2 {
+  font-size: var(--fz-2);
+}
+.fz3 {
+  font-size: var(--fz-3);
+}
+.fz4 {
+  font-size: var(--fz-4);
+}
+.fz5 {
+  font-size: var(--fz-5);
+}
+.fz6 {
+  font-size: var(--fz-6);
+}
+.fz7 {
+  font-size: var(--fz-7);
+}
+.fz8 {
+  font-size: var(--fz-8);
+}
+
 li {
   list-style: none;
 }
 
-.m0 {
-  margin: 0;
+.max80 {
+  max-width: 80vw;
 }
 
-.p0 {
-  padding: 0;
+.max80p {
+  max-width: 80%;
 }
 
 button {
@@ -272,10 +298,6 @@ button {
   }
 }
 
-.text-center {
-  text-align: center;
-}
-
 .flex {
   display: flex;
 }
@@ -285,17 +307,44 @@ button {
 .aic {
   align-items: center;
 }
+.aie {
+  align-items: end;
+}
+.ais {
+  align-items: start;
+}
+.aistretch {
+  align-items: start;
+}
 .jcsb {
   justify-content: space-between;
 }
 .jcsa {
   justify-content: space-around;
 }
+.jce {
+  justify-content: end;
+}
 .flex-column {
   flex-direction: column !important;
 }
 .flex-row {
   flex-direction: row !important;
+}
+
+.flex1 {
+  flex: 1;
+}
+.shrink0 {
+  flex-shrink: 0;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.h100 {
+  height: 100%;
 }
 
 .br50p {
@@ -336,6 +385,24 @@ button {
   gap: 16px;
 }
 
+.m0 {
+  margin: 0;
+}
+
+.mt0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.mh0 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.p0 {
+  padding: 0;
+}
+
 .p1 {
   padding: 1em;
 }
@@ -373,28 +440,206 @@ button {
   padding-right: 5em;
 }
 
-.pt1 {
+.pv1 {
   padding-top: 1em;
   padding-bottom: 1em;
 }
-.pt2 {
+.pv2 {
   padding-top: 2em;
   padding-bottom: 2em;
 }
-.pt3 {
+.pv3 {
   padding-top: 3em;
   padding-bottom: 3em;
 }
-.pt4 {
+.pv4 {
   padding-top: 4em;
   padding-bottom: 4em;
 }
-.pt5 {
+.pv5 {
   padding-top: 5em;
   padding-bottom: 5em;
 }
 
+.pt1 {
+  padding-top: 1em;
+}
+.pt2 {
+  padding-top: 2em;
+}
+.pt3 {
+  padding-top: 3em;
+}
+.pt4 {
+  padding-top: 4em;
+}
+.pt5 {
+  padding-top: 5em;
+}
+
+.pb1 {
+  padding-bottom: 1em;
+}
+.pb2 {
+  padding-bottom: 2em;
+}
+.pb3 {
+  padding-bottom: 3em;
+}
+.pb4 {
+  padding-bottom: 4em;
+}
+.pb5 {
+  padding-bottom: 5em;
+}
+
+.m0 {
+  margin: 0;
+}
+
+.m1 {
+  margin: 1em;
+}
+.m2 {
+  margin: 2em;
+}
+.m3 {
+  margin: 3em;
+}
+.m4 {
+  margin: 4em;
+}
+.m5 {
+  margin: 5em;
+}
+
+.mh1 {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+.mh2 {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+.mh3 {
+  margin-left: 3em;
+  margin-right: 3em;
+}
+.mh4 {
+  margin-left: 4em;
+  margin-right: 4em;
+}
+.mh5 {
+  margin-left: 5em;
+  margin-right: 5em;
+}
+
+.mv1 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.mv2 {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.mv3 {
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+.mv4 {
+  margin-top: 4em;
+  margin-bottom: 4em;
+}
+.mv5 {
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
+
+.mt1 {
+  margin-top: 1em;
+}
+.mt2 {
+  margin-top: 2em;
+}
+.mt3 {
+  margin-top: 3em;
+}
+.mt4 {
+  margin-top: 4em;
+}
+.mt5 {
+  margin-top: 5em;
+}
+
+.mb1 {
+  margin-bottom: 1em;
+}
+.mb2 {
+  margin-bottom: 2em;
+}
+.mb3 {
+  margin-bottom: 3em;
+}
+.mb4 {
+  margin-bottom: 4em;
+}
+.mb5 {
+  margin-bottom: 5em;
+}
+
+.mr1 {
+  margin-right: 1em;
+}
+.mr2 {
+  margin-right: 2em;
+}
+.mr3 {
+  margin-right: 3em;
+}
+.mr4 {
+  margin-right: 4em;
+}
+.mr5 {
+  margin-right: 5em;
+}
+
+.ml1 {
+  margin-left: 1em;
+}
+.ml2 {
+  margin-left: 2em;
+}
+.ml3 {
+  margin-left: 3em;
+}
+.ml4 {
+  margin-left: 4em;
+}
+.ml5 {
+  margin-left: 5em;
+}
+
 .uppercase {
   text-transform: uppercase;
+}
+
+.camel {
+  text-transform: capitalize;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: end;
+}
+
+.text-left {
+  text-align: start;
+}
+
+.transition-1 {
+  transition: 0.2s;
 }
 </style>
