@@ -1,5 +1,5 @@
 <template>
-  <div class="body">
+  <div class="body mv5">
     <h1>Tokenomics</h1>
     <h5 class="text-grey">Max Supply : 100,000,000</h5>
 

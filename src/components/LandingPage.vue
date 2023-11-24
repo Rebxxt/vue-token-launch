@@ -7,7 +7,7 @@
       <EarlyAccess class="full-page"></EarlyAccess>
       <LeaderBoard class="full-page"></LeaderBoard>
       <ProjectPlan></ProjectPlan>
-      <TokenomicsInfo class="full-page"></TokenomicsInfo>
+      <TokenomicsInfo></TokenomicsInfo>
       <FooterNavigation></FooterNavigation>
     </div>
   </div>
