@@ -4,9 +4,9 @@
       <PreviewInformation class="full-page"></PreviewInformation>
       <ProjectShortStatistics></ProjectShortStatistics>
       <AboutUs class="page-3on4"></AboutUs>
-      <EarlyAccess class="full-page"></EarlyAccess>
-      <LeaderBoard class="full-page"></LeaderBoard>
-      <ProjectPlan></ProjectPlan>
+      <EarlyAccess class="mv5 "></EarlyAccess>
+      <LeaderBoard class="mv5 full-page"></LeaderBoard>
+      <ProjectPlan class="mv5 full-page"></ProjectPlan>
       <TokenomicsInfo></TokenomicsInfo>
       <FooterNavigation></FooterNavigation>
     </div>
@@ -33,16 +33,25 @@ export default {
 <style scoped>
 
 .blur-wrap {
+  overflow: hidden;
   backdrop-filter: blur(100px);
 }
 
-  .sections {
+  .bg-light-1 {
     background-image:
         radial-gradient(ellipse 50% 10% at 15% 10%, rgba(245, 143, 243, 0.27) 0%, rgba(241, 124, 239, 0.38), 46%, transparent),
         radial-gradient(ellipse 115% 19% at 60% 5%, rgba(73, 74, 192, 0.4) 0%, rgba(88, 89, 194, 0.5), 30%, transparent),
-        radial-gradient(ellipse 80% 15% at 67vw 32%, rgba(73, 74, 192, 0.4) 0%, rgba(88, 89, 194, 0.5), 25%, transparent),
         radial-gradient(ellipse 20% 10% at 102% 10%, rgba(245, 143, 243, 0.27) 0%, rgba(241, 124, 239, 0.38), 45%, transparent),
         radial-gradient(ellipse 12% 10% at 102% 5%, rgba(1, 163, 255, 0.38) 0%, rgba(1, 163, 255, 0.29), 45%, transparent),
+
+        radial-gradient(ellipse 80% 15% at 75vw 29%, rgba(73, 74, 192, 0.4) 0%, rgba(88, 89, 194, 0.5), 25%, transparent),
+
+        radial-gradient(ellipse 80% 15% at 50vw 40%, rgba(73, 74, 192, 0.4) 0%, rgba(88, 89, 194, 0.5), 25%, transparent);
+  }
+
+  .sections {
+    background-image:
+
         radial-gradient(ellipse 115% 19% at 25% 96%, rgba(245, 143, 243, 0.27) 0%, rgba(241, 124, 239, 0.38), 16%, transparent),
         radial-gradient(ellipse 155% 15% at 75% 97%, rgba(1, 163, 255, 0.38) 0%, rgba(1, 163, 255, 0.29), 25%, transparent);
     color: var(--color-white);

@@ -125,10 +125,29 @@ export default {
       opacity: 0.9;
       filter: stretch(1);
     }
+
+    &::before {
+      content: '';
+      inset: -100px;
+      position: absolute;
+      translate: 10px -100px;
+
+      filter: blur(100px);
+      background: radial-gradient(ellipse 40% 45%, rgba(245, 143, 243, 0.8) 0%, rgba(241, 124, 239, 0.25) 50%, transparent);
+    }
   }
 }
 .preview {
   flex: 3;
+
+  &::before {
+    content: '';
+    inset: -100px;
+    position: absolute;
+    translate: 10px -100px;
+
+    filter: blur(100px);
+  }
 }
 
 
@@ -139,6 +158,16 @@ export default {
   background-position: 90% 16vh;
   box-sizing: border-box;
   border-bottom: 5vh solid transparent;
+  position: relative;
+
+  &::before {
+    content: '';
+    inset: -5px;
+    position: absolute;
+    filter: blur(100px);
+    background: radial-gradient(ellipse 55% 60% at 130% 50%, rgba(245, 143, 243, 0.27) 0%, rgba(241, 124, 239, 0.38) 65%, transparent),
+                radial-gradient(ellipse 45% 45% at 60% 35%, rgba(73, 74, 192, 0.4) 0%, rgba(88, 89, 194, 0.5) 30%, transparent);
+  }
 }
 
 .noise {

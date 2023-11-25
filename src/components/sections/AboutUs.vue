@@ -25,7 +25,7 @@
         </div>
       </div>
       
-      <div class="right-side flex-center flex1">
+      <div class="right-side relative flex-center flex1">
         <img class="w100" src="@/assets/svg/aboutus_planet.svg" alt="">
       </div>
     </main>
@@ -54,7 +54,17 @@ export default {
 }
 
 .right-side {
+  &::before {
+    content: '';
+    inset: -300px;
+    position: absolute;
+    filter: blur(100px);
+    transform: translate3d(10px,8px,-1px);
+    background: radial-gradient(ellipse 50% 50% at 50% 50%, rgba(73, 74, 192, 0.4) 0%, rgba(88, 89, 194, 0.4) 25%, transparent);
+  }
+
   img {
+    transform-style: preserve-3d;
     min-width: 250px;
   }
 }
