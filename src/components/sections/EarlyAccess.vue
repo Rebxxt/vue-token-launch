@@ -87,15 +87,23 @@ export default {
 
 <style scoped class="scss">
 
-.body::after {
+.body::before {
   content: '';
   position: absolute;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
-              linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
-  mask-image: radial-gradient(ellipse 50% 45% at 50% 50%, rgba(73, 74, 192, 0.4) 0%, rgba(88, 89, 194, 0.2) 50%, transparent);
-  filter: invert(1); /* Инверсия цветов */background-size: 20px 20px; /* Размер пикселей сетки */
+  translate: 0 15%;
+  z-index: -1;
+
+  opacity: 0.7;
+  background: radial-gradient(75% 75% at 98% 15%, #52C14EFF 0%, #073AFF00 80%),
+              radial-gradient(75% 75% at 14% 24%, #FF0000FF 0%, #073AFF00 70%),
+              radial-gradient(75% 75% at 35% 63%, #19FF47FF 0%, #073AFF00 30%),
+              radial-gradient(75% 75% at 82% 85%, #FF0000FF 0%, #FF070700 80%);
+  mask-image: radial-gradient(ellipse 55% 45% at 50% 50%, rgba(73, 74, 192, 0.4) 0%, rgba(88, 89, 194, 0.5) 50%, transparent),
+              repeating-linear-gradient(to right, transparent, transparent 4px, white 4px, white 6px),
+              repeating-linear-gradient(transparent, transparent 3px, white 3px, white 5px);
+  mask-composite: intersect;
 }
 
 .green-shadow {
@@ -103,21 +111,16 @@ export default {
 }
 
 .rocket {
-  position: relative;
-
   img {
-    transform-style: preserve-3d;
     height: 470px;
   }
 
   &::before {
     content: '';
-    inset: -350px;
+    inset: -400px;
     position: absolute;
-    filter: blur(100px);
-    transform: translate3d(10px,8px,-1px);
-    background: radial-gradient(ellipse 15% 20% at 30% 30%, rgba(245, 143, 243, 0.27) 0%, rgba(241, 124, 239, 0.28) 50%, transparent),
-                radial-gradient(ellipse 30% 25% at 50% 35%, rgba(73, 74, 192, 0.4) 0%, rgba(88, 89, 194, 0.2) 80%, transparent);
+    z-index: -1;
+    background: radial-gradient(ellipse 30% 25% at 54% 40%, rgba(44,45,99,1) 12%, rgba(152,0,218,0) 100%);;
   }
 }
 
