@@ -20,7 +20,7 @@
               transform: getTransform(card.offset)
             }"
         >
-          <div class="card-icon br50p"><img class="icon" :src="card.icon" alt=""></div>
+          <div class="card-icon br50p"><img class="icon w100 h100" :src="card.icon" alt=""></div>
           <h6>{{ card.title }}</h6>
           <p class="text-grey fz7">{{ card.description }}</p>
           <div
@@ -120,7 +120,7 @@ export default {
     inset: -400px;
     position: absolute;
     z-index: -1;
-    background: radial-gradient(ellipse 30% 25% at 54% 40%, rgba(44,45,99,1) 12%, rgba(152,0,218,0) 100%);;
+    background: radial-gradient(ellipse 30% 25% at 54% 40%, rgba(44,45,99,1) 12%, rgba(152,0,218,0) 100%);
   }
 }
 
@@ -148,11 +148,6 @@ export default {
   background: var(--bg-ligth-brown);
   border: 2px solid var(--color-light-brown);
   padding: 6px;
-
-  img {
-    width: 100%;
-    height: 100%;
-  }
 }
 
 .dot {
@@ -201,7 +196,7 @@ export default {
 }
 
 main {
-  min-height: 640px;
+  min-height: 780px;
 }
 
 p {

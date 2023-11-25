@@ -39,7 +39,7 @@ export default {
   font-style: italic;
 }
 #app {
-  background: var(--bg-black);
+  background: #0E0F13;
 }
 /*
 #app {

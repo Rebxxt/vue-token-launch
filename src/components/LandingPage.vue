@@ -4,8 +4,8 @@
       <PreviewInformation class="full-page"></PreviewInformation>
       <ProjectShortStatistics></ProjectShortStatistics>
       <AboutUs class="page-3on4"></AboutUs>
-      <EarlyAccess class="mv5 "></EarlyAccess>
-      <LeaderBoard class="mv5 full-page"></LeaderBoard>
+      <EarlyAccess class="mv5 page-3on4"></EarlyAccess>
+      <LeaderBoard class="mv5"></LeaderBoard>
       <ProjectPlan class="mv5 full-page"></ProjectPlan>
       <TokenomicsInfo></TokenomicsInfo>
       <FooterNavigation></FooterNavigation>
@@ -22,6 +22,10 @@ import PreviewInformation from "@/components/sections/PreviewInformation";
 import ProjectPlan from "@/components/sections/ProjectPlan";
 import TokenomicsInfo from "@/components/sections/TokenomicsInfo";
 import ProjectShortStatistics from "@/components/sections/ProjectShortStatistics.vue";
+Number.prototype.pad = function(n) {
+  const length = n - this.toString().split('').length;
+  return new Array(length > 0 ? length : 0).fill(0).join('') + this;
+}
 export default {
   name: "LandingPage",
   components: {
