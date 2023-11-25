@@ -502,6 +502,38 @@ button {
   padding-bottom: 5em;
 }
 
+.pl1 {
+  padding-left: 1em;
+}
+.pl2 {
+  padding-left: 2em;
+}
+.pl3 {
+  padding-left: 3em;
+}
+.pl4 {
+  padding-left: 4em;
+}
+.pl5 {
+  padding-left: 5em;
+}
+
+.pr1 {
+  padding-right: 1em;
+}
+.pr2 {
+  padding-right: 2em;
+}
+.pr3 {
+  padding-right: 3em;
+}
+.pr4 {
+  padding-right: 4em;
+}
+.pr5 {
+  padding-right: 5em;
+}
+
 .m0 {
   margin: 0;
 }
