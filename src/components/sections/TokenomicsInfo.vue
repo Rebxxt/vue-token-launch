@@ -85,10 +85,10 @@ export default {
     }
   },
   methods: {
-    graphicClick: (event, graphicType) => {
+    graphicClick (event, graphicType) {
       console.log(graphicType, 'drag', event)
     },
-    clipboard: (value) => {
+    clipboard (value) {
       navigator.clipboard.writeText(value);
       // TODO notification about clipboard
       console.log('clipboard', value)
