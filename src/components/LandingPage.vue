@@ -245,13 +245,16 @@ button {
   gap: 1em;
   position: relative;
   padding: 0 2em;
+
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
   border-radius: 50px;
+
   -webkit-transition: 1s ease-out;
   -moz-transition: 1s ease-out;
   -o-transition: 1s ease-out;
   transition: 1s ease-out;
+  background-position-x: 0;
 
   &:hover {
     background-position-x: 100%;
@@ -259,20 +262,18 @@ button {
 }
 
 .button-fill {
-  background-position-x: 0;
+  border: none;
+  background: linear-gradient(117deg, rgb(33, 38, 173) 5%, rgba(89,0,218,1) 36%, rgba(125,34,150,1) 60%, rgba(218,137,0,1)  100%);
   background-size: 200%;
   color: var(--color-white);
-  background: linear-gradient(117deg, rgb(33, 38, 173) 5%, rgba(89,0,218,1) 36%, rgba(125,34,150,1) 60%, rgba(218,137,0,1)  100%);
-  border: none;
 }
 
 .button-outline {
-  background-position-x: 0;
+  border: 2px solid rgba(136, 137, 141, 0.3);
+  background: linear-gradient(117deg, rgba(0,6,144,0.2) 5%, rgba(89,0,218,0.2) 36%, rgba(125,34,150,0.2) 60%, rgba(218,137,0,0.2)  100%);
   background-size: 200%;
   background-clip: border-box;
   color: var(--color-white);
-  background: linear-gradient(117deg, rgba(0,6,144,0.2) 5%, rgba(89,0,218,0.2) 36%, rgba(125,34,150,0.2) 60%, rgba(218,137,0,0.2)  100%);
-  border: 2px solid rgba(136, 137, 141, 0.3);
 }
 
 .flex {
