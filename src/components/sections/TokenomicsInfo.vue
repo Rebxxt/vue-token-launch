@@ -22,7 +22,7 @@
         </div>
       </div>
 
-      <div class="graphic flex-center aie">
+      <div class="graphic flex-center aie no-select">
         <img draggable="false" class="ellipse absolute ellipse-half" src="../../assets/svg/ellipse-half.svg">
         <img draggable="false" class="ellipse absolute transition-1 ellipse-1" @mouseenter="graphicClick($event, graphic['LIQUIDITY_MANAGEMENT'])" src="@/assets/svg/ellipse-small-part.svg">
         <img draggable="false" class="ellipse absolute transition-1 ellipse-2" @mouseenter="graphicClick($event, graphic['PUBLIC_SALE'])" src="@/assets/svg/ellipse-small-part.svg">
@@ -128,7 +128,6 @@ export default {
 }
 
 .graphic {
-  user-select: none;
   height: calc(var(--graph-size) * 1px / 2);
   width: calc(var(--graph-size) * 1px * 1.35);
 

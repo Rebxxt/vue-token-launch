@@ -3,13 +3,15 @@
     <div class="noise"></div>
 
     <header class="flex-center jcsb">
-      <div class="logo flex-center"><img src="@/assets/images/rocket.png" alt=""><h5>TokenLaunch</h5></div>
+      <div class="logo flex-center no-select cursor-pointer">
+        <img draggable="false" src="@/assets/images/rocket.png" alt=""><h5>TokenLaunch</h5>
+      </div>
 
       <nav class="flex gap1em">
         <ol class="m0 p0 flex gap2em">
-          <li class="text-light-grey flex-center gap8px" v-for="navigation in headerNavigation" :key="navigation.title">
+          <li class="text-light-grey flex-center gap8px no-select" v-for="navigation in headerNavigation" :key="navigation.title">
             <b>{{navigation.title}}</b>
-            <img class="icon" src="@/assets/icons/chevron-down-small.svg" alt="arrow to down">
+            <img class="icon" src="@/assets/icons/chevron-down-small.svg" alt="arrow to down" draggable="false">
           </li>
         </ol>
       </nav>
@@ -17,13 +19,13 @@
       <nav class="flex gap1em">
         <div class="community flex aistretch gap1em">
           <div class="icon-box flex-center br50p" v-for="community in communityNavigation" :key="community.value">
-            <img class="icon" :src="community.src" :alt="community.value">
+            <img class="icon" draggable="false" :src="community.src" :alt="community.value">
           </div>
         </div>
 
         <div class="flex-center">
           <button class="button-fill">
-            <img class="icon" src="@/assets/icons/launch.png" alt="launch icon">
+            <img class="icon" draggable="false" src="@/assets/icons/launch.png" alt="launch icon">
             <h6>Launch App</h6>
           </button>
         </div>
@@ -33,7 +35,7 @@
     <main class="flex-center">
       <div class="rocket relative">
         <div class="wrapper absolute">
-          <img src="@/assets/images/main-rocket3.png">
+          <img class="no-select" draggable="false" src="@/assets/images/main-rocket3.png">
         </div>
       </div>
 
@@ -47,7 +49,7 @@
 
         <div class="buttons gap2em flex">
           <button class="button-fill">
-            <img class="icon" src="@/assets/icons/launch.png" alt="launch icon">
+            <img class="icon" draggable="false" src="@/assets/icons/launch.png" alt="launch icon">
             <h6>Launch App</h6>
           </button>
 
@@ -145,7 +147,7 @@ export default {
     inset: -100px;
     position: absolute;
     translate: 10px -100px;
-
+    z-index: -1;
     filter: blur(100px);
   }
 }
@@ -204,6 +206,7 @@ header {
     padding: 16px;
 
     .icon-box {
+      cursor: pointer;
       font-size: var(--fz-7);
       padding: 8px;
       box-shadow: 0px -1px 0px 1px var(--color-shadow-light-grey);
@@ -219,5 +222,9 @@ main {
   .content .buttons {
     margin: 1em 0;
   }
+}
+
+ol li {
+  cursor: pointer;
 }
 </style>

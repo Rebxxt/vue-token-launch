@@ -8,7 +8,7 @@
 
     <main class="relative flex mt2">
       <div class="rocket">
-        <img src="@/assets/svg/earlyaccess-rocket.svg" alt="">
+        <img class="no-select" draggable="false" src="@/assets/svg/earlyaccess-rocket.svg" alt="">
       </div>
       <div class="cards absolute flex-center ais">
         <div
@@ -20,7 +20,7 @@
               transform: getTransform(card.offset)
             }"
         >
-          <div class="card-icon br50p"><img class="icon w100 h100" :src="card.icon" alt=""></div>
+          <div class="card-icon br50p"><img class="icon w100 h100" :src="card.icon" alt="" draggable="false"></div>
           <h6>{{ card.title }}</h6>
           <p class="text-grey fz7">{{ card.description }}</p>
           <div

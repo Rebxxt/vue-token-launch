@@ -11,7 +11,7 @@
         <p class="pv1 fz6 left-side__description">AptosLaunch is the first decentrolized launchpad on the Aptos Network. With Aptos building the safest and most scalable Layer 1 blockchain for the next billion users. AptosLaunch is engineered from the ground up to empower Aptos project owners</p>
         <div class="buttons gap2em flex aic mt1">
           <button class="button-fill ph2 fz7">
-            <img class="icon" src="@/assets/icons/launch.png" alt="launch icon">
+            <img class="icon" draggable="false" src="@/assets/icons/launch.png" alt="launch icon">
             <h6 class="fz7">Launch App</h6>
           </button>
 
@@ -20,13 +20,13 @@
           </button>
 
           <div class="wrap">
-            <img src="@/assets/svg/aboutus-rectangles.svg" alt="">
+            <img class="no-select" draggable="false" src="@/assets/svg/aboutus-rectangles.svg" alt="">
           </div>
         </div>
       </div>
       
       <div class="right-side relative flex-center flex1">
-        <img class="w100" src="@/assets/svg/aboutus_planet.svg" alt="">
+        <img class="w100 no-select" draggable="false" src="@/assets/svg/aboutus_planet.svg" alt="">
       </div>
     </main>
   </div>
@@ -61,6 +61,7 @@ export default {
     filter: blur(100px);
     transform: translate3d(10px,8px,-1px);
     background: radial-gradient(ellipse 50% 50% at 50% 50%, rgba(73, 74, 192, 0.4) 0%, rgba(88, 89, 194, 0.4) 25%, transparent);
+    z-index: -1;
   }
 
   img {

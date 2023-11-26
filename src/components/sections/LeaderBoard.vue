@@ -16,7 +16,7 @@
           <div class="title space-logo fz5">
             {{token.title}}
           </div>
-          <div class="logo ml2 p1 absolute"><img :src="token.icon"></div>
+          <div class="logo ml2 p1 absolute"><img class="no-select" :src="token.icon" draggable="false"></div>
           <div class="table pv1 pr3 space-logo pl1 flex jcsb relative">
             <div class="column flex flex-column" v-for="column in columns" :key="column.key">
               <div class="column-title font-normal">{{column.title}}</div>
