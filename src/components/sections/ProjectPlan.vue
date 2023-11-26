@@ -94,6 +94,7 @@ main {
   mask-image: radial-gradient(ellipse 55% 45% at 50% 50%, rgba(73, 74, 192, 0.4) 0%, rgba(88, 89, 194, 0.5) 50%, transparent),
   repeating-linear-gradient(to right, transparent, transparent 4px, white 4px, white 6px),
   repeating-linear-gradient(transparent, transparent 3px, white 3px, white 5px);
+  -webkit-mask-composite: destination-in;
   mask-composite: intersect;
 }
 
