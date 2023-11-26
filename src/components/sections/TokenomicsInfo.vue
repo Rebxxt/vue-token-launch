@@ -24,10 +24,15 @@
 
       <div class="graphic flex-center aie no-select">
         <img draggable="false" class="ellipse absolute ellipse-half" src="../../assets/svg/ellipse-half.svg">
-        <img draggable="false" class="ellipse absolute transition-1 ellipse-1" @mouseenter="graphicClick($event, graphic['LIQUIDITY_MANAGEMENT'])" src="@/assets/svg/ellipse-small-part.svg">
-        <img draggable="false" class="ellipse absolute transition-1 ellipse-2" @mouseenter="graphicClick($event, graphic['PUBLIC_SALE'])" src="@/assets/svg/ellipse-small-part.svg">
-        <img draggable="false" class="ellipse absolute transition-1 ellipse-3" @mouseenter="graphicClick($event, graphic['PRIVATE_ROUND'])" src="@/assets/svg/ellipse-small-part.svg">
-        <img draggable="false" class="ellipse absolute transition-1 ellipse-4" @mouseenter="graphicClick($event, graphic['SEED_ROUND'])" src="@/assets/svg/ellipse-small-part.svg">
+        <img
+            draggable="false"
+            class="ellipse absolute transition-1 ellipse-1"
+            :class="'ellipse-' + (index + 1)"
+            @mouseenter="graphicClick($event, graphic[graphicType])"
+            src="@/assets/svg/ellipse-small-part.svg"
+            v-for="(value, graphicType, index) in graphic"
+            :key="value"
+        >
 
         <img draggable="false" class="arrow-1 absolute arrow-small" src="@/assets/svg/arrow-small.svg">
         <img draggable="false" class="arrow-2 absolute arrow-big" src="@/assets/svg/arrow-big.svg">
@@ -75,13 +80,13 @@ export default {
   name: "TokenomicsInfo",
   data() {
     return {
-      graphic: ref({
+      graphic: {
         LIQUIDITY_MANAGEMENT: 0,
         PUBLIC_SALE: 1,
         SEED_ROUND: 2,
         PRIVATE_ROUND: 3,
-      }),
-      token: ref('adsf')
+      },
+      token: ref('0xfugdfsgdsfgdfsgadsf')
     }
   },
   methods: {
@@ -113,17 +118,13 @@ export default {
   width: 4em;
   height: 4em;
 
-  &-1 {
-    background-color: var(--color-dark-blue);
-  }
-  &-2 {
-    background-color: var(--color-purple)
-  }
-  &-3 {
-    background-color: var(--color-blue)
-  }
-  &-4 {
-    background-color: var(--color-purple)
+  $color-list: --color-dark-blue --color-purple --color-blue --color-purple;
+
+  @for $i from 1 through length($color-list) {
+    $c: nth($color-list, $i);
+    &-#{i} {
+      background-color: var($c);
+    }
   }
 }
 

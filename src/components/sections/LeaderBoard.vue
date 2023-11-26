@@ -32,88 +32,20 @@
 </template>
 
 <script>
+import {leaderBoardColumns, leaderBoardMock} from "@/components/variables/leader-board";
+
 export default {
   name: "LeaderBoard",
   data() {
     return {
       total: 20,
       showMoreVisible: true,
-      columns: [
-        {
-          key: 'rank',
-          title: 'Rank'
-        },
-        {
-          key: 'address',
-          title: 'Address'
-        },
-        {
-          key: 'athRoi',
-          title: 'ATH ROI'
-        },
-        {
-          key: 'price',
-          title: 'Token price'
-        },
-        {
-          key: 'currentPrice',
-          title: 'Current price'
-        },
-        {
-          key: 'amount',
-          title: 'Amount'
-        },
-      ],
+      columns: leaderBoardColumns,
       typeDictionary: {
         'public': 'Public',
         'private': 'Private',
       },
-      tokensMock: [
-        {
-          title: 'AptosLaunch Token',
-          type: 'private',
-          icon: require('@/assets/temp/rank1.png'),
-          rank: 1,
-          address: '0x128d8s8dfuuuuuuuuuuu3d8d8s',
-          athRoi: 4.69,
-          price: 0.05,
-          currentPrice: 0.00785222,
-          amount: 98572.76,
-        },
-        {
-          title: 'AptosLaunch Token',
-          type: 'private',
-          icon: require('@/assets/temp/rank2.png'),
-          rank: 2,
-          address: '0x128d8s8dfuuuuuuuuuuu3d8d8s',
-          athRoi: 2.69,
-          price: 0.065,
-          currentPrice: 0.00785222,
-          amount: 98572.76,
-        },
-        {
-          title: 'AptosLaunch Token',
-          type: 'private',
-          icon: require('@/assets/temp/rank3.png'),
-          rank: 3,
-          address: '0x128d8s8dfuuuuuuuuuuu3d8d8s',
-          athRoi: 4.01,
-          price: 0.07,
-          currentPrice: 0.007859992,
-          amount: 98572.76,
-        },
-        {
-          title: 'AptosLaunch Token',
-          type: 'private',
-          icon: require('@/assets/temp/rank4.png'),
-          rank: 4,
-          address: '0x128d8s8dfuuuuuuuuuuu3d8d8s',
-          athRoi: 4.69,
-          price: 0.16,
-          currentPrice: 0.0088888944,
-          amount: 98572.76,
-        },
-      ]
+      tokensMock: [...leaderBoardMock]
     }
   },
   computed: {
@@ -134,56 +66,14 @@ export default {
   },
   methods: {
     showMore() {
-      const lastRank = this.tokensMock.slice(-1)[0].rank;
+      let lastRank = this.tokensMock.slice(-1)[0].rank;
       console.log('Find more after rank', lastRank);
       console.log('Find more then current total', this.localTotal);
-      const mock = [
-        {
-          title: 'AptosLaunch Token',
-          type: 'private',
-          icon: require('@/assets/temp/rank5.png'),
-          rank: lastRank + 1,
-          address: '0x128d8s8dfuuuuuuuuuuu3d8d8s',
-          athRoi: 1664.69,
-          price: 0.05,
-          currentPrice: 0.01332,
-          amount: 98572.76,
-        },
-        {
-          title: 'AptosLaunch Token',
-          type: 'private',
-          icon: require('@/assets/temp/rank4.png'),
-          rank: lastRank + 2,
-          address: '0x128d8s8dfuuuuuuuuuuu3d8d8s',
-          athRoi: 4.69,
-          price: 0.05,
-          currentPrice: 0.00785222,
-          amount: 982332572.71,
-        },
-        {
-          title: 'AptosLaunch Token',
-          type: 'private',
-          icon: require('@/assets/temp/rank4.png'),
-          rank: lastRank + 3,
-          address: '0x128d8s8dfuuuuuuuuuuu3d8d8s',
-          athRoi: 4.69,
-          price: 0.05,
-          currentPrice: 0.00785222,
-          amount: 982332572.71,
-        },
-        {
-          title: 'AptosLaunch Token',
-          type: 'private',
-          icon: require('@/assets/temp/rank4.png'),
-          rank: lastRank + 4,
-          address: '0x128d8s8dfuuuuuuuuuuu3d8d8s',
-          athRoi: 4.69,
-          price: 0.05,
-          currentPrice: 0.00785222,
-          amount: 982332572.71,
-        },
-      ]
-      this.tokensMock.push(...mock)
+      this.tokensMock.push(...leaderBoardMock.map(token => ({
+        ...token,
+        rank: ++lastRank,
+      })))
+    //   TODO when backend will end
     //   update this.localTotal
     //   this.total = response.total;  if (this.total <= this.token.length) { this.showMoreVisible = false; }
     }

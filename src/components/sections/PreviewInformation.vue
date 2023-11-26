@@ -63,43 +63,19 @@
 </template>
 
 <script>
+import {
+  headerCommunityNavigation,
+  headerNavigation,
+  previewDescription
+} from "@/components/variables/preview-information";
+
 export default {
   name: "PreviewInformation",
   data() {
     return {
-      headerNavigation: [
-        {
-          title: 'Product',
-          children: [],
-        },
-        {
-          title: 'Our Secret',
-          children: [],
-        },
-        {
-          title: 'DAO',
-          children: [],
-        },
-      ],
-      communityNavigation: [
-        {
-          src: require('@/assets/icons/x.png'),
-          value: 'x'
-        },
-        {
-          src: require('@/assets/icons/discord.png'),
-          value: 'discord'
-        },
-        {
-          src: require('@/assets/icons/telegram.png'),
-          value: 'telegram'
-        },
-        {
-          src: require('@/assets/icons/medium.png'),
-          value: 'medium'
-        },
-      ],
-      description: 'Empower your cryptocurrency project with community-driven liquidity through Aptos Web 3.0 Launchpad. Built on the safest and scalable Layer 1 blockchain, we provide a robust platform for launching and growing your digital venture.'
+      headerNavigation: headerNavigation,
+      communityNavigation: headerCommunityNavigation,
+      description: previewDescription,
     }
   }
 }
